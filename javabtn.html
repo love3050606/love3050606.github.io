@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" >點我</button>
+</body>
+<script>
+///who
+document.querySelector('#btn')
+///when
+document.querySelector('#btn').addEventListener('click',changebtn)
+//what
+function changebtn() {document.querySelector('#btn').innerHTML='不要點我'}
+</script>
+</html>
