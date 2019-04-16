@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>課堂練習</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+    body{
+        margin: 0;
+    }
+    #box_shadow{
+        box-shadow: 1px 1px 1px 1px rgba(7, 7, 7,0.5);
+        
+    }
+    #container{
+        max-width: 1170px;
+        margin: auto;
+    }
+    #navbar{
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+    }
+    #logo{
+        width: 80px;
+        height: 60px;
+        background-image: url(img/logo.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #link_all{
+        padding: 0;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        }
+    #link{
+        text-decoration: none;
+        color:rgb(112, 112, 112);
+        padding: 15px;
+        list-style: none;
+        }
+        #linkall2{
+            padding: 0;
+            margin: auto;
+            display: none;
+        }
+    #link2{
+        list-style: none;
+                
+    }
+    #buger{
+        width: 60px;
+        height: 60px;
+        background-color: black;
+        display: none;
+    }
+    #content{
+        width: 100%;
+        margin: auto;
+    }
+    #mobile_ul,
+    #mobile_li{
+        padding: 0;
+        margin: 0;
+        display: none;
+    
+    }
+    @media screen and (max-width:500px){
+       #link_all{
+           display: none;
+       } 
+       #buger{
+           display: block;
+       }
+
+    }
+    </style>
+</head>
+<body>
+    <div id="box_shadow">
+        <div id="container">
+             <nav id ="navbar">
+                    <div id="logo"></div>
+                    <ul id= "link_all" class="link_all">
+                        <li id="link"><a href="">連結一</a><i class="fas fa-ad"></i></li>
+                        <li id="link"><a href="">連結二</a></li>
+                        <li id="link">
+                            <a href="">連結三</a>
+                            <ul id="linkall2">
+                                <li id="link2">一一一</li>
+                                <li id="link2">一一一</li>
+                                <li id="link2">一一一</li>
+                            </ul>
+                        </li>
+                    </ul>
+                <div id="buger">
+                    
+                </div>
+            </nav>
+        </div>    
+    </div>
+    <div id="content">
+        <ul id="mobile_li">
+            <li id="mobile_li">mobile</li>
+            <li id="mobile_li">mobile</li>
+            <li id="mobile_li">mobile</li>
+        </ul>
+    </div>
+</body>
+<script>
+var btn = document.querySelector('#buger')
+var menu = document.querySelectorAll('#mobile_li')
+btn.addEventListener('click',clickhandler)
+function clickhandler(){
+menu.style.display= "block" 
+}
+function clickhandler(){
+menu.style.display= "block" 
+}
+</script>
+</html>
