@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+
+    *{
+        border: 1px solid black;
+    }
+    .cross,.cross2{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        margin-top: 10px;
+    }
+    .line1,.line2{
+        width: 80px;
+        height: 10px;
+        position: absolute;
+        top: 45px;
+        left: 7.5px;
+        transition-duration: 1s;
+    }
+    .cross:hover .line1{
+        transform: rotate(45deg);
+    }
+    .cross:hover .line2{
+        transform: rotate(-45deg);
+    }
+    /* cross2 */
+    .line3{
+        width: 80px;
+        height: 10px;
+        position: absolute;
+        top:15px;
+        left: 7.5px;
+        transition-duration: 1s;
+    }
+    .line4{
+        width: 80px;
+        height: 10px;
+        position: absolute;
+        top:45px;
+        left: 7.5px;
+        transition-duration: 1s;
+    }
+    .line5{
+        width: 80px;
+        height: 10px;
+        position: absolute;
+        top:75px;
+        left: 7.5px;
+        transition-duration: 1s;
+    }
+    .cross2:hover .line4{
+        opacity: 0;
+    }
+    .cross2:hover .line3{
+        transform: rotate(1080deg);
+        position: absolute;
+        left: 7.5px;
+        top: 45px; 
+    }
+    .cross2:hover .line5{
+        transform: rotate(-1080deg);
+        position: absolute;
+        left: 7.5px;
+        top: 45px; 
+    }
+    </style>
+</head>
+<body>
+    <div class="cross">
+        <div class="line1"></div>
+        <div class="line2"></div>
+    </div>
+    <div class="cross2">
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <div class="line5"></div>
+    </div>
+</body>
+
+</html>

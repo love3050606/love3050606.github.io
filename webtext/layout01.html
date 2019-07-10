@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout01</title>
+
+    <style>
+        *{
+            outline: 1px solid red;
+        }
+    #all{
+        width: 600px;
+        height: 800px;
+        background-color: violet;
+    }
+    #nav{
+        width: 600px;
+        height: 100px;
+        background-color: yellow;
+    }
+    #main{
+        width: 600px;
+        height: 600px;
+        background-color: aqua;
+    }
+    #mainL{
+        width: 100px;
+        height: 600px;
+        background-color: blue;
+        float: left;
+    }
+    #mainR{
+        width: 500px;
+        height: 600px;
+        background-color: rgb(126, 126, 179);
+        float: left;
+    }
+    #mainRT{
+        width: 500px;
+        height: 200px;
+        background-color: rgb(88, 88, 93);
+        float: left;
+    }
+    #mainRTL{
+        width: 30%;
+        height: 200px;
+        background-color: rgb(206, 125, 27);
+        float: left;
+    }
+    #mainRTR{
+        width: 70%;
+        height: 200px;
+        background-color: rgb(219, 74, 195);
+        float: left;
+    }
+    #mainRM{
+        width: 500px;
+        height: 200px;
+        background-color: rgb(52, 52, 197);
+        float: left;
+    }
+    #mainRML{
+        width: 50%;
+        height: 200px;
+        background-color: bisque;
+        float: left;
+    }
+    #mainRMR{
+        width: 50%;
+        height: 200px;
+        background-color: rgb(100, 84, 64);
+        float: left;
+    }
+    #mainRB{
+        width: 500px;
+        height: 200px;
+        background-color: rgb(41, 41, 87);
+        float: left;
+    }
+    #mainRBL{
+        width: 30%;
+        height: 200px;
+        background-color: bisque;
+        float: left;
+    }
+    #mainRBR{
+        width: 70%;
+        height: 200px;
+        background-color: rgb(100, 84, 64);
+        float: left;
+    }
+    #footer{
+        width: 600px;
+        height: 100px;
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="nav"></div>
+        <div id="main">
+            <div id="mainL"></div>
+            <div id="mainR">
+                <div id="mainRT">
+                    <div id="mainRTL"></div>
+                    <div id="mainRTR"></div>
+                </div>
+                <div id="mainRM">
+                    <div id="mainRML"></div>
+                    <div id="mainRMR"></div>
+                </div>
+
+                <div id="mainRB">
+                    <div id="mainRBL"></div>
+                    <div id="mainRBR"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
