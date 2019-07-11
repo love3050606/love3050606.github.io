@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iron-man</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/iron-man.css">
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="swiper01">
+              <h1 class="title_h1">Iron Man</h1>
+          </div>
+          <div class="swiper-slide"  id="swiper02">
+                <h1 class="title_h1">Iron Man</h1>
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  <!-- Swiper end -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <!-- navbar -->
+  <nav>
+      <div class="nav_container">
+          <a class="nav_a" href="#main1">Who am I ?</a>
+          <a class="nav_a" href="#mainL2">鋼鐵衣</a>
+          <a class="nav_a" href="#mainT3">人工智慧</a>
+          <a class="nav_a" href="#main4">復仇者聯盟</a>
+      </div>
+  </nav>
+  
+      <div class="section1">
+          <div id="mainT1">
+                <h2>Who am I ?</h2>
+          </div>
+          <div class="main" id="mainL1">
+              <h3>Tony-Starck</h3>
+              <p>東尼·史塔克生於紐約長島，父親為著名的企業兼發明家霍華·史塔克。小時候即展現驚人的天賦，僅15歲時就進入麻省理工學院電子工程學系大學部就讀，於19歲時以最高分的成績獲得雙碩士學位。21歲時他的雙親死於車禍意外（實際上是被九頭蛇洗腦後的酷寒戰士襲擊），史塔克繼承了父親擁有的史塔克企業（Stark Industries）。</p>
+        </div>
+          <div class="main" id="mainR1">
+              <h3>Iron-Man</h3>
+              <p>在一次前往越南，史塔克誤入陷阱而被俘虜。史塔克的心臟由於被陷阱的碎片插入而命在旦夕，唯一的活路就是和同為俘虜的著名物理學家何伊申，合作為王秋製造武器。不過史塔克與殷森私下利用工廠祕密設計並製造了一套動力裝甲，這一副鐵製外骨骼式護甲賦予史塔克巨大的力量與其他能力，不但能讓他的心臟繼續跳動，還可以讓他逃脫。</p>
+          </div>
+      </div>
+      <div class="section2">
+          <div data-aos="fade-right"  data-aos-duration="12000" id="mainL2">
+              <p id="mainL2_container">鋼鐵衣</p>
+          </div>
+          <div data-aos="fade-left"  data-aos-duration="12000" id="mainR2">
+                <div id="mainR2_container">由史塔克一手打造的鋼鐵衣，依據需求派出不同的戰鬥服裝</div>
+          </div>
+      </div>
+      <div class="section3">
+          <div id="mainT3">
+              <h2>艾德恩·賈維斯</h2>
+          </div>
+          <div id="mainL3"></div>
+          <div id="mainR3">
+              <p>艾德文˙賈維斯是服侍史塔克（Stark）家族的管家，也是東尼˙史塔克（Tony Stark）在缺乏父愛的成長過程中最能從家族中感受到直接關愛的對象。為了紀念這位良師益友，東尼在之成年後以賈維斯為藍本設計了「老賈（J.A.R.V.I.S.）」這名人工智慧。</p>
+          </div>
+          <div class="clear"></div>
+      </div>
+      <div class="section4">
+                <h2>復仇者聯盟</h2>
+          <div id="main4">
+              <p>最初復仇者的成員為蟻人、黃蜂女、雷神索爾、鋼鐵人以及浩克。然而《復仇者》第二期中浩克就離隊改由美國隊長加入。不斷更改的成員名單已成為復仇者的特點，但一個主題從未更改過，那就是復仇者專與單一超級英雄無法應付的敵人作戰。復仇者的成員包括了人類、機器人、神、外星人、怪物甚至還有過去的敵人。
+
+                    雖然復仇者成員作風不同，但復仇者總能團結一致，打擊強大的威脅勢力。</p>
+          </div>
+      </div>
+      <footer>
+          <p id="footer_p">史塔克企業版權所有</p>
+      </footer>
+  
+      <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+              } else {
+                document.getElementById("myBtn").style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+            </script>
+            
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            var swiper = new Swiper('.swiper-container', {
+              spaceBetween: 30,
+              centeredSlides: true,
+              autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+    </script>
+    <script>
+            AOS.init();
+          </script>
+    
+</body>
+</html>
