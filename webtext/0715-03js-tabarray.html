@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{
+         outline: 1px solid red;
+         box-sizing: border-box;
+     }
+     body{
+         background-color: rgb(121, 171, 246);
+     }
+     
+     .tabl{
+         padding: 10px 40px;
+         float: left;
+         border: 1px solid black;
+         margin: 0 10px;
+         background-color: rgb(251, 248, 245);
+         border-radius: 5px;
+     }
+     .tabl_container{
+         width: 50%;
+         height: 300px;
+         float: left;
+         border-radius: 10px;
+         background-color: aliceblue;
+         padding: 20px;
+     }
+     .clear{
+         clear: both;
+     }
+     .show{
+         display: block;
+     }
+     .hidden{
+         display: none;
+     }
+    </style>
+</head>
+<body>
+    <div class="tabl" >分頁一</div>
+    <div class="tabl" >分頁二</div>
+    <div class="tabl" >分頁三</div>
+    <div class="tabl" >分頁四</div>
+    <div class="clear"></div>
+    <div class="show tabl_container" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis consequatur ipsam fugit. Culpa nemo enim quas vero, officia eos dolores laboriosam quidem tempora dolor iste assumenda reiciendis magni tempore architecto?</div>
+    <div class="hidden tabl_container" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, vitae exercitationem! Temporibus culpa sequi debitis minima sed, non itaque mollitia a consequuntur molestias officiis dolorem hic reprehenderit veritatis facere maiores.</div>
+    <div class="hidden tabl_container" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reiciendis sunt unde, distinctio porro asperiores tempora dolore rerum placeat ipsam iure cupiditate, minima aliquam alias laboriosam odit eaque laborum et?</div>
+    <div class="hidden tabl_container" >22Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reiciendis sunt unde, distinctio porro asperiores tempora dolore rerum placeat ipsam iure cupiditate, minima aliquam alias laboriosam odit eaque laborum et?</div>
+    
+    <script>
+    var btn_ary = document.querySelectorAll('.tabl');
+    var container_ary = document.querySelectorAll('.tabl_container');
+   
+    // console.log(btn_ary);
+    for (let index = 0; index < btn_ary.length; index++) {
+        const btn = btn_ary[index]; 
+        const container = container_ary[index]; 
+        // console.log(btn);
+        // console.log(container);
+        btn.onclick = function(){
+            changeclass();
+            container.classList.add('show');
+            container.classList.remove('hidden');
+        }
+    }
+    function changeclass(){
+        for (let index = 0; index < container_ary.length; index++) {
+            const hidden = container_ary[index];
+            hidden.classList.add('hidden');
+            hidden.classList.remove('show');
+        }
+    }
+    </script>
+</body>
+</html>

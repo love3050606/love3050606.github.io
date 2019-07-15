@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+    .card img{
+        width: 600px;
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        
+    </div>
+
+    <script>
+        var book = {
+            image:'https://images-na.ssl-images-amazon.com/images/I/51ps4KYRZTL._SX404_BO1,204,203,200_.jpg',
+            name:'Html5',
+            price:5,
+            size:50,
+            color:'white',
+            level:5
+        };
+        console.log(book.color);
+        var card = document.querySelector('.card');
+        // var card_top = document.querySelector('.card_top');
+        // var card_img = document.querySelector('.card_img');
+        // var card_bottom = document.querySelector('.card_bottom');
+        // var card_name = document.querySelector('.card_name');
+
+
+        // card_img.src=book.image;
+        // card_name.innerHTML='書名:'+book.name;
+        // card_bottom.innerHTML='書名:'+book.name+'售價:'+book.price+'大小:'+book.size+'顏色:'+book.clolr+'等級:'+book.level;
+        card.innerHTML=`
+        <div class="card_top">
+                <img class="card_img" src="${book.image}" alt="">
+        </div>
+        <h1 class="card_name" style="color:red">${book.name}</h1>
+        <div class="card_bottom">價錢:${book.price}<br>大小:${book.size}<br>顏色:${book.color}<br>難度:${book.level}</div>
+        `
+    
+    </script>
+</body>
+</html>
