@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        * {
+            outline: 1px solid red;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            background-color: rgb(111, 153, 243);
+            margin: 100px auto 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        select {
+            position: absolute;
+            left: 30px;
+            top: 20px;
+            z-index: 22222222;
+        }
+
+        .sun {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            left: 90px;
+            top: 40px;
+            border-radius: 50%;
+            box-shadow: rgba(254, 255, 177, 0.5) 0 0 30px 30px;
+            animation: sun 10s ease;
+            transform: scale(1);
+        }
+
+        @keyframes sun {
+            0% {
+                transform: scale(1);
+                background-color: yellow;
+                filter: drop-shadow(-10px -10px 10px rgba(167, 160, 102, 0.5));
+            }
+
+            50% {
+                transform: scale(1.15);
+                background-color: rgb(251, 251, 178);
+                filter: drop-shadow(15px 15px 15px rgba(202, 196, 145, 0.1));
+            }
+
+            100% {
+                transform: scale(1);
+                background-color: yellow;
+                filter: drop-shadow(-10px -10px 10px rgba(167, 160, 102, 0.5));
+            }
+        }
+
+        .cloud {
+            width: 300px;
+            height: 400px;
+            background-image: url(img/cloud.png);
+            background-size: 500px;
+            filter: drop-shadow(5px 5px 3px rgba(56, 61, 65, 0.3));
+            position: absolute;
+            left: 0;
+            animation: cloud 10s ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+
+        @keyframes cloud {
+            0% {
+                left: 0px;
+            }
+
+            50% {
+                left: 50px;
+            }
+
+            100% {
+                left: 0px;
+            }
+        }
+
+        #h1_1 {
+            color: rgb(255, 255, 255);
+            position: absolute;
+            filter: drop-shadow(1px 1px 0.5px rgba(56, 61, 65, 1));
+            left: 100px;
+            bottom: 70px;
+            font-size: 20px;
+        }
+
+        #h1_2 {
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(1px 1px 0.5px rgba(56, 61, 65, 1));
+            position: absolute;
+            left: 100px;
+            bottom: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<div class="card">
+    <select name="" id="select">
+        
+    </select>
+    <div class="sun"></div>
+    <div class="cloud"></div>
+    <h1 id="h1_1">現在溫度:<span class="temp_span"></span></h1>
+    <h1 id="h1_2">降雨率:<span class="rain_span"></span></h1>
+
+</div>
+
+<body>
+
+
+    <script>
+        var locations = [];
+        var card = document.querySelector('.card');
+        var temp_span = document.querySelector('.temp_span');
+        var rain_span = document.querySelector('.rain_span');
+        var select = document.querySelector('#select');
+
+
+        fetch('https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-091?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D&format=JSON')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                // console.log(myJson);
+                locations = myJson.cwbopendata.dataset.locations.location;
+                var temp = locations[5].weatherElement[1].time[0].elementValue.value;
+                var rain = locations[5].weatherElement[9].time[0].elementValue.value;
+
+                temp_span.innerHTML = `${temp}`;
+                rain_span.innerHTML = `${rain}`;
+                // card.innerHTML = 
+                // `<div><h1>現在溫度:${temp}</h1></div>
+                //  <div><h1>降雨機率:${rain}</h1></div>
+                // `
+                for (let i = 0; i < locations.length; i++) {
+                    const location = locations[i].locationName;
+                    console.log(location);
+                    select.innerHTML += `<option value="">${location}</option>`
+                    // console.log(location);
+
+                }
+
+            });
+
+
+    </script>
+</body>
+
+</html>
