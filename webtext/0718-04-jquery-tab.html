@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{
+         outline: 1px solid red;
+         box-sizing: border-box;
+     }
+     body{
+         background-color: rgb(121, 171, 246);
+     }
+     
+     .tabl{
+         padding: 10px 40px;
+         float: left;
+         border: 1px solid black;
+         margin: 0 10px;
+         background-color: rgb(251, 248, 245);
+         border-radius: 5px;
+     }
+     .tabl_container{
+         width: 50%;
+         height: 300px;
+         float: left;
+         border-radius: 10px;
+         background-color: aliceblue;
+         display: none;
+     }
+     .clear{
+         clear: both;
+     }
+     .show{
+         display: block;
+     }
+     
+    </style>
+</head>
+<body>
+    <div class="tabl" data-dataid="01" id="tabltop1">分頁一</div>
+    <div class="tabl" data-dataid="02" id="tabltop2">分頁二</div>
+    <div class="tabl" data-dataid="03" id="tabltop3">分頁三</div>
+    <div class="clear"></div>
+    <div class="show tabl_container"  data-dataid="01" id="tabl_container1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis consequatur ipsam fugit. Culpa nemo enim quas vero, officia eos dolores laboriosam quidem tempora dolor iste assumenda reiciendis magni tempore architecto?</div>
+    <div class="tabl_container"   data-dataid="02"id="tabl_container2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, vitae exercitationem! Temporibus culpa sequi debitis minima sed, non itaque mollitia a consequuntur molestias officiis dolorem hic reprehenderit veritatis facere maiores.</div>
+    <div class="tabl_container"  data-dataid="03" id="tabl_container3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reiciendis sunt unde, distinctio porro asperiores tempora dolore rerum placeat ipsam iure cupiditate, minima aliquam alias laboriosam odit eaque laborum et?</div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <script>
+    $('.tabl').click(function () {
+        // console.log(this.dataset.dataid)
+        // $(this.dataset.dataid)
+        var tabid=this.dataset.dataid;
+        $('.tabl_container').removeClass('show')
+        // $('.tabl_container[data-dataid='+tabid+']').addClass('show')
+        $(`.tabl_container[data-dataid='${tabid}']`).addClass('show')
+        
+        
+        
+        
+    })
+
+    </script>
+    
+    <!-- <script>
+    function changeclass(){
+        tabl_container1.classList.add('hidden');
+        tabl_container2.classList.add('hidden');
+        tabl_container3.classList.add('hidden');
+        tabl_container1.classList.remove('show');
+        tabl_container2.classList.remove('show');
+        tabl_container3.classList.remove('show');
+    }
+    var tabl_btn1 = document.querySelector('#tabltop1');
+    var tabl_btn2 = document.querySelector('#tabltop2');
+    var tabl_btn3 = document.querySelector('#tabltop3');
+    tabl_btn1.onclick = function(){
+        changeclass()
+        var showA = document.querySelector('#tabl_container1').classList.add('show');
+        var showA = document.querySelector('#tabl_container1').classList.remove('hidden');
+    }
+    tabl_btn2.onclick = function(){
+        changeclass()
+        var showB = document.querySelector('#tabl_container2').classList.add('show');
+        var showB = document.querySelector('#tabl_container2').classList.remove('hidden');
+    }
+    tabl_btn3.onclick = function(){
+        changeclass()
+        var showC = document.querySelector('#tabl_container3').classList.add('show');
+        var showC = document.querySelector('#tabl_container3').classList.remove('hidden');
+    }
+    </script> -->
+</body>
+</html>
