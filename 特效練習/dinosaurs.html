@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* *{
+            outline: 1px solid red;
+        } */
+        body{
+            margin: 0;
+        }
+     #no{
+         position: fixed;
+         right: 20px;
+         top: 300px;
+         background-image: url(img/warning.png);
+         cursor: no-drop;
+         width: 90px;
+         height: 60px;
+         background-size: 90px;
+         background-repeat: no-repeat;
+         animation: shake 2s infinite ease;
+     }
+     @keyframes shake{
+         0%{
+             transform: rotate(30deg);
+         }
+         50%{
+            transform: rotate(25deg);
+         }
+         100%{
+            transform: rotate(30deg);
+         }
+     }
+     #dinosaurs{
+         position: fixed;
+         top: 300px;
+         right: -955px;
+         animation: show 15s  ease 1s;
+         display: none;
+         filter: drop-shadow(-20px 30px 5px);
+     }
+     @keyframes show{
+         0%{
+            position: fixed;
+            right: -955px;
+         }
+         40%{
+            position: fixed;
+            right: -435px;
+         }
+         70%{
+            position: fixed;
+            right: -835px;
+         }
+
+         100%{
+            position: fixed;
+            right: -955px;
+         }
+     }
+     
+    
+    </style>
+</head>
+<body>
+    <div id="no"></div>
+    <img id="dinosaurs" src="/img/p06jhmnh.png" alt="">
+</body>
+
+    <script>
+    var no = document.querySelector('#no');
+    var show = document.querySelector('#dinosaurs');
+    
+    no.onclick=function () {
+        if (show.style.display=='block') {
+            show.style.display='none';  
+        } else {
+            show.style.display='block';  
+        }
+    }
+    
+    
+    
+    </script>
+</html>
