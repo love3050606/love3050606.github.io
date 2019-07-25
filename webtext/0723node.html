@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+<link rel="stylesheet" href="node_modules\swiper\dist\css\swiper.min.css">
+<style>
+    .banner_img{
+        width: 100%;
+        height: calc(100vh - 50px);
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+</head>
+<body>
+    <nav class="nav">
+        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </nav>
+      <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide ">
+          <div class="banner_img" style="background-image:url(https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg);"></div>
+      </div>
+      <div class="swiper-slide">
+        <div class="banner_img" style="background-image:url(https://cdn1.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg);"></div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</body>
+
+<script src="node_modules\jquery\dist\jquery.min.js"></script>
+<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+<script src="node_modules\swiper\dist\js\swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</html>
