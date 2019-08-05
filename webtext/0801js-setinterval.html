@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .load{
+            width: 400px;
+            height: 30px;
+            outline: 1px solid red;
+        }
+        .loading{
+            width: 0;
+            height: 30px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="load">
+        <div class="loading"></div>
+    </div>
+
+    <script>
+    var loading = document.querySelector('.loading');
+    // console.log(loading);
+    function run(params) {
+        
+    }
+    var belong = setInterval(run,100)
+    var running = loading.style.width=belong;
+    console.log(running);
+    
+    // var run = setInterval(run,100);
+    
+    // for (let run = 0; run < 5; run++) {
+    //     running++
+    // }
+    
+    </script>
+</body>
+</html>

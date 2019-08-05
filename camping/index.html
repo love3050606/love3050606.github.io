@@ -6,48 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/indix.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <div class="zoom">
+        <img id="background" src="img/mountain.jpg" alt="">
         <img src="img/city.png" alt="" class="city">
-        <!-- <img src="img/instagramicon.png" alt="" id="right">
-        <img src="img/youtubeicon.jpg" alt="" id="mid"> -->
+        <h1 id="zoomH1">松露露營區</h1>
     </div>
-    <section>
-        <p class="pp"> 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, omnis! Suscipit, provident, magni magnam
-            eaque quidem porro voluptates ex nam quibusdam iusto necessitatibus recusandae maxime aperiam! Mollitia quia
-            rem sed.
-            Atque distinctio cumque ipsam autem sapiente rerum illum tempore repellendus similique! Fugiat quasi
-            provident, rem distinctio nulla excepturi aperiam, dolorum est voluptas explicabo ipsum. Numquam ullam
-            perspiciatis dolorem aperiam iste!
-            Voluptas praesentium, odio inventore quas adipisci veniam omnis animi cumque, eveniet iste consequuntur
-            assumenda! Voluptatibus blanditiis laudantium, minus voluptatem soluta corrupti atque hic nulla in maxime
-            provident sit sequi ea.
-            Distinctio itaque minus omnis praesentium sunt consequuntur atque, quibusdam quis optio fuga quod!
-            Reiciendis omnis sed, quos hic fugiat repudiandae, suscipit aliquid excepturi, ipsa necessitatibus soluta
-            nulla accusamus voluptates? Cupiditate?
-            Magni, vel! Sint veniam, esse numquam iusto eius illo maxime inventore consequuntur labore ab tempora ipsa,
-            totam saepe laborum voluptas tenetur! Laudantium illum voluptas velit repudiandae et tenetur doloribus eum!
-            Dicta voluptas et non provident asperiores perferendis doloribus vel saepe repellendus labore accusamus,
-            reiciendis officia autem quibusdam sunt iure possimus? Asperiores magni ea voluptate optio nisi laudantium
-            ducimus quo nemo!
-            Voluptatum labore tempora porro itaque dolores quam numquam similique fugit provident eaque nobis reiciendis
-            aperiam ipsam consectetur, facilis veniam ad dolore ratione nesciunt, necessitatibus sed? Quibusdam magnam
-            tempora esse itaque.
-            Voluptates ea pariatur voluptatibus, aperiam nisi saepe aut error accusamus voluptatem quod quibusdam, quo
-            enim consequatur distinctio perferendis nesciunt repudiandae esse? Dolores ullam, eum laboriosam doloremque
-            inventore consequatur iusto perferendis.
-            Aspernatur nihil dignissimos modi distinctio dolores eaque harum sunt. Quasi asperiores ipsum consequuntur
-            dolorum veniam quia nihil, velit tempore quis necessitatibus doloribus molestiae voluptatem saepe unde,
-            deserunt porro? Veniam, consequuntur.
-            Odit voluptates animi incidunt consectetur ab sequi. Libero itaque quos fuga consequuntur facere expedita
-            optio quia dolore odit? Libero labore consectetur facere beatae rem dolore error nesciunt quisquam numquam
-            perspiciatis!
-        </p>
-    </section>
+    <div class="menu"></div>
+    
     <script>
     var city = document.querySelector('.city');
     scroll = window.pageYOffset;
@@ -55,7 +24,7 @@
         var offset = window.pageYOffset;
         scroll = offset;
         city.style.width= (100+scroll/4)+'%';
-        city.style.bottom=(10-scroll/5)+'%'
+        city.style.bottom=(0-scroll/5)+'%'
     })
     </script>
 </body>
