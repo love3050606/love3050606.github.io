@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+    <script type="text/javascript" src="js/easings.min.js"></script>
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="js/fullpage.min.js"></script>
+    <style>
+        * {
+            outline: 1px solid red;
+            font-family: 標楷體;
+            scroll-behavior: smooth;
+        }
+
+        .nav_container {
+            max-width: 1200px;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            font-size: 26px;
+            padding: 40px 0 20px 0;
+        }
+
+        .nav_container a {
+            text-decoration: none;
+        }
+
+        .nav_p {
+            margin: 0;
+            color: white;
+        }
+
+        /* .nav_p {
+            font-size: 26px;
+            margin: 0;
+            text-transform: uppercase;
+            background-image: url(img/1.jpg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: ani_p 3s ease-in infinite;
+        }
+
+        @keyframes ani_p {
+            0% {
+                background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            50% {
+                background: linear-gradient(to right, #30CFD0 25%, #330867 75%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+           100% {
+            background: linear-gradient(to right, #30CFD0 50%, #330867 50%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        } */
+        .banner {
+            background-image: url(img/Wild-Camping-In-Scotland.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .banner_h1{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 60px;
+            color: white;
+        }
+        .banner p{
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .camping{
+            background-image: url(img/camping-portada-1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .cabin{
+            background-image: url(img/airbnb-arizona.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .culvert_house{
+            background-image: url(img/159600942.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .container_house{
+            background-image: url(img/contemporary-house.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .fp-tableCell{
+            height: 100vh;
+        }
+        .archery{
+            background-image: url(img/20170128_102159.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .fish{
+            background-image: url(img/MG_9220.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .service{
+            background-image: url(img/Altitude-Blog-Camping-Set-Outdoor-Travel-COVER-TheNorthFace.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_container">
+            <a href="#banner">
+                <p class="nav_p">關於松露</p>
+            </a>
+            <a href="#characteristic">
+                <p class="nav_p">露營特色</p>
+            </a>
+            <a href="#activity">
+                <p class="nav_p">休閒遊憩</p>
+            </a>
+            <a href="#service">
+                <p class="nav_p">為您服務</p>
+            </a>
+            <a href="">
+                <p class="nav_p">聯絡資訊</p>
+            </a>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section banner" id="banner">
+            <h1 class="banner_h1">松露露營區</h1>
+            <p>遠離城市喧囂，
+                <br>投入大自然的擁抱，
+                <br>盡情的在草地上奔跑。</p>
+        </div>
+        <div class="section characteristic" id="characteristic">
+            <div class="slide camping"></div>
+            <div class="slide cabin"></div>
+            <div class="slide culvert_house"></div>
+            <div class="slide container_house"></div>
+        </div>
+        <div class="section activity" id="activity">
+                <div class="slide archery"></div>
+                <div class="slide fish"></div>
+        </div>
+        <div class="section service" id="service"></div>
+    </div>
+
+    <script>
+        var myFullpage = new fullpage('#fullpage', {
+            //Navigation
+            menu: '#menu',
+            lockAnchors: false,
+            anchors: ['firstPage', 'secondPage'],
+            navigation: false,
+            navigationPosition: 'right',
+            navigationTooltips: ['firstSlide', 'secondSlide'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
+
+            //Scrolling
+            css3: true,
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            fitToSection: true,
+            fitToSectionDelay: 1000,
+            scrollBar: false,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            continuousHorizontal: false,
+            scrollHorizontally: false,
+            interlockedSlides: false,
+            dragAndMove: false,
+            offsetSections: false,
+            resetSliders: false,
+            fadingEffect: false,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            scrollOverflowReset: false,
+            scrollOverflowOptions: null,
+            touchSensitivity: 15,
+            bigSectionsDestination: null,
+
+            //Accessibility
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            sectionsColor: ['#ccc', '#fff'],
+            fixedElements: '#header, .footer',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            responsiveSlides: false,
+            parallax: false,
+            parallaxOptions: { type: 'reveal', percentage: 62, property: 'translate' },
+            cards: false,
+            cardsOptions: { perspective: 100, fadeContent: true, fadeBackground: true },
+
+            //Custom selectors
+            sectionSelector: '.section',
+            slideSelector: '.slide',
+
+            lazyLoading: true,
+
+            //events
+            onLeave: function (origin, destination, direction) { },
+            afterLoad: function (origin, destination, direction) { },
+            afterRender: function () { },
+            afterResize: function (width, height) { },
+            afterReBuild: function () { },
+            afterResponsive: function (isResponsive) { },
+            afterSlideLoad: function (section, origin, destination, direction) { },
+            onSlideLeave: function (section, origin, destination, direction) { }
+        });
+    </script>
+</body>
+
+</html>
