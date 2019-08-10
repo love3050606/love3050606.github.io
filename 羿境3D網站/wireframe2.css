@@ -1,0 +1,121 @@
+*{
+    outline: 1px solid red;
+}
+body{
+    margin: 0;
+}
+
+/* navbar */
+#navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(26, 29, 48);
+}
+
+#nav_container{
+    width: 100%;
+    max-width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-around;
+}
+
+#logo{
+    width: 300px;
+    height: 75px;
+    margin-top: 5px;
+    background-image: url(../img/logo.png);
+    background-size: cover;
+}
+
+.nav_a{
+    display: block;
+    float: left;
+    margin: 50px 0 0 0;
+    color: rgb(216, 216, 216);
+    font-size: 20px;
+    text-decoration: none; 
+}
+#nav_a:hover{
+    text-decoration: underline;
+    color: rgb(254, 255, 212);
+}
+#main1{
+    width: 100%;
+    height: 92vh;
+    margin: 0 auto 0 auto;
+    background-image: url(../img/main1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* 關於我們 */
+
+#main2{
+    max-width: 1140px;
+    height: 30vh;
+    position: absolute;
+    top:40%;
+    left: 20%;
+    
+}
+
+#main2_L{
+    width: 50%;
+    height: 20vh;
+    background-color: rgb(48, 48, 48);
+    margin-top: 5%;
+    float: left;
+}
+#main2_R{
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(202, 201, 201);
+    box-sizing: border-box;
+    padding: 5% 0 0 55%;
+}
+
+/* 作品展示3D圖 */
+
+.swiper-container {
+    width: 85%;
+    height: 85vh;
+    display: none;
+    position: absolute;
+    top: 20px;
+    
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 80%;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-slide:nth-child(2n) {
+    width: 95%;
+  }
+  .swiper-slide:nth-child(3n) {
+    width: 95%;
+  }
+  /* VR360 */
+  #panorama {
+    width: 100%;
+    max-width: 1140px;
+    height: 70vh;
+    margin: 0 auto;
+}

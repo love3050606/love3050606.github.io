@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>羿境3D代繪</title>
+
+    <link rel="shortcut icon" href="img/icon.ico"/>
+    <link rel="stylesheet" href="css/wireframe.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="pannellum/pannellum.css"/>
+    <script type="text/javascript" src="pannellum/pannellum.js"></script>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav id="navbar">
+        <div id="nav_container">
+            <a id="nav_a"href="#main2">專案分享</a>
+            <a id="nav_a"href="#main3">服務內容</a>
+            <div id="logo"></div>
+            <a id="nav_a"href="#main4">報價資訊</a>
+            <a id="nav_a"href="#main5">聯絡方式</a>
+        </div>
+    </nav>
+
+    <!-- 首頁圖 -->
+
+    <div id="main1">
+      <div id="Studio"></div>
+    </div>
+
+    <!-- 關於我們 -->
+    <h1 >關於我們</h1>
+
+    <div id="main2">
+        <div id="main2_L"  data-aos="fade-right">
+            <p style="color:white;font-size: 60px;float: left;margin: 0;">3D&nbsp;Studio</p>
+        </div>
+        <div id="main2_R"  data-aos="fade-left">
+            <p><br>羿境3D繪圖工作室，
+               <br>我們專為室內設計公司服務，
+               <br>將您的平面圖及立面圖生成3D影像，
+               <br>讓您在客戶溝通上更順利，
+               <br>影像圖面表達更直觀。
+                   </p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <!-- 作品展示3D圖 -->
+    
+    <h1>3D圖/渲染圖</h1>
+    
+    <!-- Swiper -->
+    
+    <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image:url(img/331.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/332.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/333.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/334.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/335.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/336.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/337.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/338.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/339.jpg);background-size: cover;background-position: center;"></div>
+              <div class="swiper-slide" style="background-image:url(img/3310.jpg);background-size: cover;background-position: center;"></div>
+            </div>
+    
+    <!-- Add Pagination -->
+    
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <!-- VR360 -->
+
+    <h1>VR360環景</h1>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "img/128.jpg"
+        });
+        </script>
+    
+    <!-- 服務內容 -->
+    <h1>服務內容</h1>
+    <div id="main3">
+        <p class="main3_p">1.必須有平面配置圖及立面設計圖<br>
+                           2.收受訂金50%後進行繪製<br>
+                           3.製作時間以收到訂金後計算，約2張圖/1天<br>
+                           4.小圖初稿後，收付尾款50%後，繼續修改<br>
+                           5.修改2次為限，完成後就赴大圖，約1920*1080符合電腦螢幕尺寸<br>
+        </p>
+      <p class="main3_p">A.3D圖 透過平面圖及立面圖的CAD，為您打造未來的家</p>
+      <p class="main3_p">B.720環景圖 室內空間一覽無遺，視覺效果更勝3D圖</p>
+      <p class="main3_p">C.虛擬漫遊(敬請期待)自由漫步在您設計的家中</p>
+      <p class="main3_p">D.實鏡互動(敬請期待)自由漫步以及與家具互動，可以移動家具，啟動開關等...</p>
+    </div>
+    <!-- 報價資訊 -->
+    <h1>報價資訊</h1>
+    <div id="main4">
+      <p class="main3_p">1.3D圖 住家3000起/張 商空4000起/張 公舍6000起/張</p>
+      <p class="main3_p">2.720環景圖 住家7000起/張 商空8000起/張 公舍9000起/張</p>
+      <p class="main3_p">3.虛擬漫遊(敬請期待)6000起/空間</p>
+      <p class="main3_p">4.實鏡互動(敬請期待)50000起/空間</p>
+    </div>
+    <!-- 聯絡方式 -->
+    <footer id="main5">
+      <div id="logo2"></div>
+      <div class="main5">Email:love3050606@gmail.com</div>
+      <div class="main5">LineID:0986678513</div>
+      <div class="main5">Cell-Phone:0986678513</div>
+      <a class="main5" href="https://www.facebook.com/3DMAXANDVRAY/">FB粉絲專頁</a>
+    </footer>
+    <!-- back to top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+    <!-- AOS -->
+    <script src="js/aos.js"></script>
+    <script>
+            AOS.init();
+    </script>
+     <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+     <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
